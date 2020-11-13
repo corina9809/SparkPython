@@ -12,3 +12,9 @@ data.printSchema()
 test_df = data.select(data.modified).show()
 
 test_df = data.select(data.created).show()
+
+data = [1, 2, 3, 4, 5]
+distData = spark.parallelize(data)
+
+
+distFile = spark.textFile("data.txt")
